@@ -1,0 +1,40 @@
+<script>
+    const ctx = document.getElementById('myPieChart').getContext('2d');
+    const myPieChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: ['Jan-24', 'Mar-24', 'May-24', 'Jun-24', 'Jul-24'],
+            datasets: [{
+                label: 'Part Consumption Cost (₹)',
+                data: [22956, 5552, 2352, 466, 38495],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.6)',
+                    'rgba(54, 162, 235, 0.6)',
+                    'rgba(255, 206, 86, 0.6)',
+                    'rgba(75, 192, 192, 0.6)',
+                    'rgba(153, 102, 255, 0.6)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'Part Consumption Cost (₹) by Month'
+                }
+            }
+        }
+    });
+</script>
